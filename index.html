@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Adaptation Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🌍 Climate Adaptation Hub</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#theory" class="nav-link">Theory</a></li>
+                <li><a href="#interactive" class="nav-link">Activities</a></li>
+                <li><a href="#cases" class="nav-link">Case Studies</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h1>Welcome to Climate Adaptation Learning</h1>
+                    <p class="hero-subtitle">Master the fundamentals of climate adaptation through interactive learning</p>
+                    <div class="learning-objectives">
+                        <h3>What you'll learn:</h3>
+                        <div class="objectives-grid">
+                            <div class="objective-card">
+                                <div class="objective-icon">🌡️</div>
+                                <h4>Climate Impact Drivers (CID)</h4>
+                                <p>Understand the environmental changes that drive climate impacts</p>
+                            </div>
+                            <div class="objective-card">
+                                <div class="objective-icon">🏠</div>
+                                <h4>Vulnerability &amp; Exposure</h4>
+                                <p>Learn how communities and systems are susceptible to climate impacts</p>
+                            </div>
+                            <div class="objective-card">
+                                <div class="objective-icon">⚡</div>
+                                <h4>Climate Impacts</h4>
+                                <p>Explore the consequences of climate change on society and environment</p>
+                            </div>
+                            <div class="objective-card">
+                                <div class="objective-icon">🛡️</div>
+                                <h4>Adaptation Policies</h4>
+                                <p>Discover strategies and policies for building resilience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary btn--lg" onclick="startLearning()">Start Learning Journey</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theory Section -->
+        <section id="theory" class="section">
+            <div class="container">
+                <h1>Climate Adaptation Theory</h1>
+                <div class="theory-content">
+                    <div class="framework-overview">
+                        <h2>The CID Framework</h2>
+                        <p>Climate adaptation is based on understanding the relationship between Climate Impact Drivers (CID), Exposure, Vulnerability, and resulting Impacts, which inform Policy responses.</p>
+                        
+                        <div class="framework-diagram">
+                            <div class="framework-flow">
+                                <div class="framework-item" data-concept="cid">
+                                    <h3>🌡️ Climate Impact Drivers</h3>
+                                    <p>Environmental changes like heatwaves, droughts, and sea level rise</p>
+                                </div>
+                                <div class="arrow">→</div>
+                                <div class="framework-parallel">
+                                    <div class="framework-item" data-concept="exposure">
+                                        <h3>🏠 Exposure</h3>
+                                        <p>People, assets, and systems in areas that could be affected</p>
+                                    </div>
+                                    <div class="framework-item" data-concept="vulnerability">
+                                        <h3>🔴 Vulnerability</h3>
+                                        <p>Susceptibility to harm from climate impacts</p>
+                                    </div>
+                                </div>
+                                <div class="arrow">→</div>
+                                <div class="framework-item" data-concept="impact">
+                                    <h3>⚡ Climate Impact</h3>
+                                    <p>Consequences for human and natural systems</p>
+                                </div>
+                                <div class="arrow">→</div>
+                                <div class="framework-item" data-concept="policy">
+                                    <h3>🛡️ Policy Response</h3>
+                                    <p>Adaptation strategies and interventions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="concept-details">
+                        <div class="concept-card active" id="concept-cid">
+                            <h3>Climate Impact Drivers (CID)</h3>
+                            <p>Climate Impact Drivers are the physical climate conditions that directly influence human and natural systems. These include:</p>
+                            <ul>
+                                <li><strong>Temperature changes:</strong> Heatwaves, cold spells, rising temperatures</li>
+                                <li><strong>Precipitation patterns:</strong> Droughts, heavy rainfall, changing seasonal patterns</li>
+                                <li><strong>Extreme events:</strong> Typhoons, wildfires, storms</li>
+                                <li><strong>Gradual changes:</strong> Sea level rise, ocean acidification</li>
+                            </ul>
+                        </div>
+
+                        <div class="concept-card" id="concept-exposure">
+                            <h3>Exposure</h3>
+                            <p>Exposure refers to the presence of people, livelihoods, environmental services, and resources in places that could be adversely affected by climate impacts.</p>
+                            <ul>
+                                <li><strong>Geographic location:</strong> Coastal areas, floodplains, urban centers</li>
+                                <li><strong>Infrastructure:</strong> Buildings, transportation networks, utilities</li>
+                                <li><strong>Economic activities:</strong> Agriculture, tourism, industry</li>
+                                <li><strong>Social systems:</strong> Communities, institutions, services</li>
+                            </ul>
+                        </div>
+
+                        <div class="concept-card" id="concept-vulnerability">
+                            <h3>Vulnerability</h3>
+                            <p>Vulnerability is the propensity to be adversely affected by climate impacts. It encompasses sensitivity and adaptive capacity.</p>
+                            <ul>
+                                <li><strong>Social vulnerability:</strong> Age, health, income, education level</li>
+                                <li><strong>Economic vulnerability:</strong> Dependence on climate-sensitive sectors</li>
+                                <li><strong>Physical vulnerability:</strong> Infrastructure quality, building standards</li>
+                                <li><strong>Institutional vulnerability:</strong> Governance capacity, social networks</li>
+                            </ul>
+                        </div>
+
+                        <div class="concept-card" id="concept-impact">
+                            <h3>Climate Impacts</h3>
+                            <p>Climate impacts are the consequences of climate change on human and natural systems, resulting from the interaction of CID with exposure and vulnerability.</p>
+                            <ul>
+                                <li><strong>Health impacts:</strong> Heat stress, disease outbreaks, mental health effects</li>
+                                <li><strong>Economic impacts:</strong> Crop losses, infrastructure damage, tourism decline</li>
+                                <li><strong>Social impacts:</strong> Displacement, inequality, conflict</li>
+                                <li><strong>Environmental impacts:</strong> Ecosystem disruption, species loss</li>
+                            </ul>
+                        </div>
+
+                        <div class="concept-card" id="concept-policy">
+                            <h3>Adaptation Policies</h3>
+                            <p>Adaptation policies are deliberate actions to reduce vulnerability and enhance resilience to climate impacts.</p>
+                            <ul>
+                                <li><strong>Structural measures:</strong> Sea walls, improved drainage, climate-resilient infrastructure</li>
+                                <li><strong>Ecosystem-based:</strong> Green infrastructure, natural flood management</li>
+                                <li><strong>Social measures:</strong> Early warning systems, community education</li>
+                                <li><strong>Economic measures:</strong> Insurance, incentives, financial support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="theory-navigation">
+                        <button class="btn btn--outline" onclick="previousConcept()">← Previous</button>
+                        <button class="btn btn--primary" onclick="nextConcept()">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Activities Section -->
+        <section id="interactive" class="section">
+            <div class="container">
+                <h1>Interactive Learning Activities</h1>
+                
+                <div class="activity-instruction">
+                    <h2>Concept Matching Activity</h2>
+                    <p><strong>Instructions:</strong> Drag each example from the pool below to the correct category. You need to correctly categorize at least 80% of items to complete this activity.</p>
+                </div>
+
+                <!-- Matching Activity -->
+                <div id="matching-activity" class="activity active">
+                    <div class="matching-header">
+                        <div class="score-display">
+                            <span id="current-score">Score: 0/0</span>
+                            <span id="attempts">Attempts: 0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="matching-game">
+                        <div class="examples-pool">
+                            <h3>Examples to Sort:</h3>
+                            <div id="examplesPool" class="examples-container"></div>
+                        </div>
+                        
+                        <div class="categories-grid">
+                            <div class="category-box" data-category="cid">
+                                <h4>🌡️ Climate Impact Drivers</h4>
+                                <div class="drop-zone" id="cid-zone"></div>
+                            </div>
+                            <div class="category-box" data-category="vulnerability">
+                                <h4>🔴 Vulnerability</h4>
+                                <div class="drop-zone" id="vulnerability-zone"></div>
+                            </div>
+                            <div class="category-box" data-category="exposure">
+                                <h4>🏠 Exposure</h4>
+                                <div class="drop-zone" id="exposure-zone"></div>
+                            </div>
+                            <div class="category-box" data-category="impact">
+                                <h4>⚡ Impact</h4>
+                                <div class="drop-zone" id="impact-zone"></div>
+                            </div>
+                            <div class="category-box" data-category="policy">
+                                <h4>🛡️ Policy Response</h4>
+                                <div class="drop-zone" id="policy-zone"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-controls">
+                        <button class="btn btn--secondary" onclick="resetMatching()">Reset Activity</button>
+                        <button class="btn btn--primary" onclick="checkMatching()">Check Answers</button>
+                        <button class="btn btn--outline" onclick="showAnswers()" id="show-answers-btn" style="display: none;">Show Correct Answers</button>
+                    </div>
+                    
+                    <div id="matching-feedback" class="feedback"></div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="cases" class="section">
+            <div class="container">
+                <h1>Real-World Case Studies</h1>
+                <p>Explore how the climate adaptation framework applies to real situations around the world.</p>
+                
+                <div class="case-study-selector">
+                    <button class="case-btn active" onclick="showCase(0)">Urban Heatwave</button>
+                    <button class="case-btn" onclick="showCase(1)">Coastal Flooding</button>
+                    <button class="case-btn" onclick="showCase(2)">Agricultural Drought</button>
+                </div>
+                
+                <div id="case-study-content" class="case-study">
+                    <!-- Case study content will be populated by JavaScript -->
+                </div>
+                
+                <div class="case-builder">
+                    <h3>Case Study Builder</h3>
+                    <p>Create your own case study scenario:</p>
+                    
+                    <div class="builder-form">
+                        <div class="form-group">
+                            <label class="form-label">Select Climate Impact Driver:</label>
+                            <select id="builder-cid" class="form-control">
+                                <option value="">Choose a CID...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Select Exposure:</label>
+                            <select id="builder-exposure" class="form-control">
+                                <option value="">Choose exposure...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Select Vulnerability:</label>
+                            <select id="builder-vulnerability" class="form-control">
+                                <option value="">Choose vulnerability...</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn--primary" onclick="generateScenario()">Generate Scenario</button>
+                    </div>
+                    
+                    <div id="generated-scenario" class="generated-scenario"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section">
+            <div class="container">
+                <h1>Knowledge Assessment</h1>
+                <p>Test your understanding of climate adaptation concepts.</p>
+                
+                <div id="quiz-container" class="quiz-container">
+                    <div id="quiz-question" class="quiz-question">
+                        <!-- Quiz questions will be populated by JavaScript -->
+                    </div>
+                    
+                    <div id="quiz-options" class="quiz-options">
+                        <!-- Quiz options will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="quiz-controls">
+                        <button class="btn btn--secondary" onclick="previousQuestion()" id="prevBtn" disabled>← Previous</button>
+                        <span id="question-counter" class="question-counter">Question 1 of 5</span>
+                        <button class="btn btn--primary" onclick="nextQuestion()" id="nextBtn">Next →</button>
+                    </div>
+                    
+                    <div id="quiz-feedback" class="quiz-feedback"></div>
+                </div>
+                
+                <div id="quiz-results" class="quiz-results hidden">
+                    <h2>Quiz Complete!</h2>
+                    <div id="final-score" class="final-score"></div>
+                    <button class="btn btn--primary" onclick="restartQuiz()">Take Quiz Again</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Completion Modal -->
+    <div id="completion-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 Congratulations!</h2>
+            <p>You've completed the Climate Adaptation Learning Hub!</p>
+            <div class="completion-summary">
+                <div class="summary-item">
+                    <span class="summary-icon">📚</span>
+                    <span>Theory Sections Complete</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-icon">🎮</span>
+                    <span>Interactive Activities Done</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-icon">📋</span>
+                    <span>Quiz Completed</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-icon">📖</span>
+                    <span>Case Studies Explored</span>
+                </div>
+            </div>
+            <button class="btn btn--primary" onclick="closeCompletionModal()">Continue Learning</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
